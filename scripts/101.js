@@ -55,7 +55,7 @@ var totalAmount = function (amount, service) {
 var splitAmount = function (amount, service, people) {
     total = totalAmount(amount, service);
     price = Number.parseFloat(total / people).toFixed(2);
-    pricePerPerson = `$${price} per person`
+    pricePerPerson = `$${price} per person`;
     return pricePerPerson;
 };
 

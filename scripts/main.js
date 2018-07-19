@@ -54,8 +54,14 @@ var totalAmount = function (amount, service) {
 // Exercise 6:
 var splitAmount = function (amount, service, people) {
     total = totalAmount(amount, service);
-    pricePerPerson = Number.parseFloat(total / people).toFixed(2);
+    price = Number.parseFloat(total / people).toFixed(2);
+    pricePerPerson = `$${price} per person`
     return pricePerPerson;
 };
 
-console.log(splitAmount(120, 'good', 2));
+var bill = 234;
+var serviceQuality = 'fair';
+var numPeople = 3;
+
+
+console.log(splitAmount(bill, serviceQuality, numPeople));

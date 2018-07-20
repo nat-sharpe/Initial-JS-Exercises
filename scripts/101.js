@@ -1,33 +1,34 @@
-// Exercise 2:
-// var greet = function (name) {
-//     console.log(`Hello, ${name}!`);
-// };
-
-// greet('Moustache')
-
 // Exercise 1:
-// var greet = function (name) {
-//     var alternate = 'World';
-//     if (name === undefined) {
-//         return `Hello, ${alternate}!`;
-//     };
-//     else {
-//         return `Hello, ${name}!`;
-//     };
-// };
+var greet = function (name) {
+    console.log(`Hello, ${name}!`);
+};
+
+greet('Moustache')
+
+// Exercise 2:
+var greet = function (name) {
+    var alternate = 'World';
+    if (name === undefined) {
+        return `Hello, ${alternate}!`;
+    }
+    else {
+        return `Hello, ${name}!`;
+    };
+};
     
-// console.log(greet());
+console.log(greet());
 
 // Exercise 3:
-// var madLib = function (name, subject) {
-//     return `${name}'s favorite subject is ${subject}.`;
-// };
+var madLib = function (name, subject) {
+    return `${name}'s favorite subject is ${subject}.`;
+};
 
-// console.log(madLib('Nat', 'programming'));
+console.log(madLib('Nat', 'programming'));
 
 // Exercise 4:
 var tipAmount = function (amount, service) {
-    var tip = 0;
+    var tip;
+    
     if (service === 'good') {
         tip = (amount * .2);
     }
@@ -44,8 +45,8 @@ var tipAmount = function (amount, service) {
 
 // Exercise 5:
 var totalAmount = function (amount, service) {
-    tip = tipAmount(amount, service);
-    total = amount + tip;
+    var tip = tipAmount(amount, service);
+    var total = amount + tip;
     return total;
 };
 
@@ -53,9 +54,9 @@ var totalAmount = function (amount, service) {
 
 // Exercise 6:
 var splitAmount = function (amount, service, people) {
-    total = totalAmount(amount, service);
-    price = Number.parseFloat(total / people).toFixed(2);
-    pricePerPerson = `$${price} per person`;
+    var total = totalAmount(amount, service);
+    var price = Number.parseFloat(total / people).toFixed(2);
+    var pricePerPerson = `$${price} per person`;
     return pricePerPerson;
 };
 

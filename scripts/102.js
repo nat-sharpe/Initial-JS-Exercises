@@ -257,3 +257,71 @@
 
 // var test = [1, -3, -22, 4, 55, 0];
 // console.log(positiveNums(test));
+
+// Exercise 11;
+// var matrixSum = function (matrix1, matrix2) {
+//     var answer = [];
+//     var i = 0;
+//     while (i < 2) {
+//         var j = 0;
+//         var lineA = matrix1[i];
+//         var lineB = matrix2[i];
+//         while (j < 2) {
+//             var num = lineA[j] + lineB[j];
+//             answer.push(num);
+//             j++;
+//         }
+//         i++;
+//     }
+//     return answer;
+// };
+// var test1 = [[2, 7], [4, 1]];
+// var test2 = [[6, 1], [3, 0]];
+// console.log(matrixSum(test1, test2));
+
+// Exercise 12
+// var matrixMultiply = function (matrix1, matrix2) {
+//     var answer = [];
+//     var i = 0;
+//     while (i < 2) {
+//         var j = 0;
+//         var line = matrix1[i];
+//         while (j < 2) {
+//             var k = 0;
+//             var product = 0;
+//             while (k < 2) {
+//                 var column = matrix2[k];
+//                 var num1 = line[k];
+//                 var num2 = column[j];
+//                 product += (num1 * num2);
+//                 k++;
+//             }
+//             answer.push(product);
+//             j++;
+//         }
+//         i++;
+//     }
+//     return answer;
+// };
+
+// var test1 = [[2, 4], [3, 4]];
+// var test2 = [[5, 2], [3, 1]];
+// console.log(matrixMultiply(test1, test2));
+
+// Exercise 13
+var rockPaperScissors = function (player1, player2) {
+    var game = player1 + player2;
+    if (player1 === player2) {
+        return 'draw';
+    }
+    else if (game === 'rockscissors' || game === 'paperrock' || game === 'scissorspaper') {
+        return 'player1';
+    }
+    else {
+        return 'player2';
+    }
+
+};
+
+var test = rockPaperScissors('rock', 'scissors');
+console.log(test);

@@ -309,19 +309,53 @@
 // console.log(matrixMultiply(test1, test2));
 
 // Exercise 13
-var rockPaperScissors = function (player1, player2) {
-    var game = player1 + player2;
-    if (player1 === player2) {
-        return 'draw';
-    }
-    else if (game === 'rockscissors' || game === 'paperrock' || game === 'scissorspaper') {
-        return 'player1';
-    }
-    else {
-        return 'player2';
-    }
+// var rockPaperScissors = function (player1, player2) {
+//     var game = player1 + player2;
+//     if (player1 === player2) {
+//         return 'draw';
+//     }
+//     else if (game === 'rockscissors' || game === 'paperrock' || game === 'scissorspaper') {
+//         return 'player1';
+//     }
+//     else {
+//         return 'player2';
+//     }
+// };
 
+// var test = rockPaperScissors('rock', 'scissors');
+// console.log(test);
+
+// Exercise 14
+var ticTacToe = function (endGame) {
+    var i = 0;
+    while (i < 3) {
+        var j = 0;
+        var column = '';
+        var diaganol1 = '';
+        var diaganol2 = '';
+        while (j < 3) {
+            var line = endGame[j];
+            if (line[0] !== null && line[0] === line[1] && line[0] === line[2]) {
+                return line[0];
+            }
+            column+= line[i];
+            if (column[0] === column[1] && column[0] === column[2]) {
+                return column[0];
+            }
+            diaganol1+= line[j];
+            if (diaganol1[0] === diaganol1[1] && diaganol1[0] === diaganol1[2]){
+                    return diaganol1[0];
+            }
+            diaganol2+= line[2-j];
+            if (diaganol2[0] === diaganol2[1] && diaganol2[0] === diaganol2[2]) {
+                return diaganol2[0];
+            }
+            j++;
+        }
+        i++;
+    }
+    return null;
 };
 
-var test = rockPaperScissors('rock', 'scissors');
+var test = ticTacToe([['O', null, 'X'], [null, 'O', 'X'], ['X', 'O', 'X']]);
 console.log(test);

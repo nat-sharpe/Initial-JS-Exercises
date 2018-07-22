@@ -211,24 +211,49 @@
 // };
 
 // Exercise 8
+// var extendLongVowels = function (string, vowels, length) {
+//     var newString = '';
+//     var previousLetter = '';
+//     var vowelsToLengthen = vowels;
+//     for (var letter of string) {
+//         if (vowelsToLengthen.includes(letter) && letter === previousLetter) {
+//             for (var i = 1; i < length; i++) {
+//                 newString += letter
+//             }
+//         }
+//         else { 
+//             newString += letter;
+//             previousLetter = letter.toLowerCase();
+//         }
+//     }
+//     return newString;
+// };
 
-var extendLongVowels = function (string, vowels, length) {
-    var newString = '';
-    var previousLetter = '';
-    var vowelsToLengthen = vowels;
-    for (var letter of string) {
-        if (vowelsToLengthen.includes(letter) && letter === previousLetter) {
-            for (var i = 1; i < length; i++) {
-                newString += letter
-            }
-        }
-        else { 
-            newString += letter;
-            previousLetter = letter.toLowerCase();
-        }
-    }
-    return newString;
-};
+// var test = extendLongVowels('Ooh, have some cheese, Gromit!', ['e', 'o'], 5);
+// console.log(test);
 
-var test = extendLongVowels('Ooh, have some cheese, Gromit!', ['e', 'o'], 5);
-console.log(test);
+// Exercise 9:
+// var sumNumbers = function (listToSum) {
+//     answer = 0;
+//     for (var num of listToSum) {
+//         answer += num;
+//     }
+//     return answer;
+// };
+
+// var test = [4, 2, 6, 22];
+// console.log(sumNumbers(test));
+
+// Exercise 10:
+// var positiveNums = function (listToCheck) {
+//     var answer = [];
+//     for (var num of listToCheck) {
+//         if (num >= 0) {
+//             answer.push(num);
+//         }
+//     }
+//     return answer;
+// };
+
+// var test = [1, -3, -22, 4, 55, 0];
+// console.log(positiveNums(test));
